@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="main">
+
+  <div class="side">
+    <div>
+      <div class="side__top">
+        <a class="side__logo" href="/">
+          <img class="side__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>      
+      <div class="side__menu">
+        <a class="side__menu-item" href="#">
+          <div class="side__menu-left">
+            <img src="images/key-square.svg" alt="">
+            <span>Dashboard</span>
+          </div>
+        </a>
+        <a class="side__menu-item" href="#">
+          <div class="side__menu-left">
+            <img src="images/3d-square.svg" alt="">
+            <span>Product</span>
+          </div>
+          <img src="images/arrow-right.svg" alt="" class="arrow">
+        </a>
+        <a class="side__menu-item side__menu-item--active" href="#">
+          <div class="side__menu-left">
+            <img src="images/user-square.svg" alt="">
+            <span>Customers</span>
+          </div>
+          <img src="images/arrow-right.svg" alt="" class="arrow">
+        </a>
+        <a class="side__menu-item" href="#">
+          <div class="side__menu-left">
+            <img src="images/wallet-money.svg" alt="">
+            <span>Income</span>
+          </div>
+          <img src="images/arrow-right.svg" alt="" class="arrow">
+        </a>
+        <a class="side__menu-item" href="#">
+          <div class="side__menu-left">
+            <img src="images/discount-shape.svg" alt="">
+            <span>Promote</span>
+          </div>
+          <img src="images/arrow-right.svg" alt="" class="arrow">
+        </a>
+        <a class="side__menu-item" href="#">
+          <div class="side__menu-left">
+            <img src="images/message-question.svg" alt="">
+            <span>Help</span>
+          </div>
+          <img src="images/arrow-right.svg" alt="" class="arrow">
+        </a>
+      </div>
+    </div>
+    <div class="side__user">
+      <div class="side__user-img">
+        <img src="images/user.png" alt="">
+      </div>
+      <div class="side__user-inner">
+        <span class="side__user-name">Evano</span>
+        <span class="side__user-position">Project Manager</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-mobile">
+    <div class="header-mobile__logo">
+      <a class="header-mobile__logo-link" href="/">
+        <img class="header-mobile__logo-img" src="images/logo.svg" alt="logo">
+      </a>
+    </div>
+    <div class="burger-wrap">
+      <div class="burger"><span></span></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="content__hello">
+      Hello Evano
+      <img src="images/hand.png" alt="">
+      ,
+    </div>
+    <div class="content__table">
+      <h1>
+        All Customers
+      </h1>
+      <a class="content__filter-members" href="#">
+        Active Members
+      </a>
+  
+      <table id="customers" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Company</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kristin Watson</td>
+            <td data-title="Company">Facebook</td>
+            <td data-title="Phone Number">(704) 555-0127</td>
+            <td data-title="Email">kristin@facebook.com</td>
+            <td data-title="Country">Åland Islands</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="active">
+                Inctive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="active">
+                Inctive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="active">
+                Inctive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="active">
+                Inctive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jane Cooper</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(225) 555-0118</td>
+            <td data-title="Email">jane@microsoft.com</td>
+            <td data-title="Country">United States</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Floyd Miles</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(205) 555-0100</td>
+            <td data-title="Email">floyd@yahoo.com</td>
+            <td data-title="Country">Kiribati</td>
+            <td data-title="Status">
+              <div class="active">
+                Inctive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Ronald Richards</td>
+            <td data-title="Company">Adobe</td>
+            <td data-title="Phone Number">(302) 555-0107</td>
+            <td data-title="Email">ronald@adobe.com</td>
+            <td data-title="Country">Israel</td>
+            <td data-title="Status">
+              <div class="inactive">
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Marvin McKinney</td>
+            <td data-title="Company">Tesla</td>
+            <td data-title="Phone Number">(252) 555-0126</td>
+            <td data-title="Email">marvin@tesla.com</td>
+            <td data-title="Country">Iran</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jerome Bell</td>
+            <td data-title="Company">Google</td>
+            <td data-title="Phone Number">(629) 555-0129</td>
+            <td data-title="Email">jerome@google.com</td>
+            <td data-title="Country">Réunion</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Kathryn Murphy</td>
+            <td data-title="Company">Microsoft</td>
+            <td data-title="Phone Number">(406) 555-0120</td>
+            <td data-title="Email">kathryn@microsoft.com</td>
+            <td data-title="Country">Curaçao</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Customer Name">Jacob Jones</td>
+            <td data-title="Company">Yahoo</td>
+            <td data-title="Phone Number">(208) 555-0112</td>
+            <td data-title="Email">jacob@yahoo.com</td>
+            <td data-title="Country">Brazil</td>
+            <td data-title="Status">
+              <div class="active">
+                Active
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
