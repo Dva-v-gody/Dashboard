@@ -196,7 +196,7 @@ table.dataTable thead th {
   font-weight: 500;
 }
 
-th {
+#customers th {
   color: #B5B7C0;
 }
 
@@ -209,7 +209,7 @@ table.dataTable>tbody>tr>td {
   padding: 20px 4px;
 }
 
-.active, .inactive {
+#customers .active, #customers .inactive {
   width: 80px;
   height: 29px;
   display: flex;
@@ -219,23 +219,23 @@ table.dataTable>tbody>tr>td {
   box-sizing: border-box;
 }
 
-.active {
+#customers .active {
   background-color: #16c09861;
   color: #008767;
   border: 1px solid #00B087;
 }
 
-.inactive {
+#customers .inactive {
   background-color: #FFC5C5;
   color: #DF0404;
   border: 1px solid #DF0404;
 }
 
-colgroup col:last-child  {
+#customers colgroup col:last-child  {
   width: 88px !important;
 }
 
-thead tr th:last-child {
+#customers thead tr th:last-child {
   text-align: center;
 }
 
@@ -314,59 +314,74 @@ div.dt-container.dt-empty-footer tbody>tr:last-child>* {
 }
 
 @media (max-width: 1300px) {
+
   .side {
     width: 240px;
     padding: 36px 15px 76px 15px;
   }
+
   .side__logo-img {
     width: 200px;
   }
+
   .content {
     width: calc(100% - 285px);
     padding: 44px 20px;
     margin-left: 235px;
   }
+
   .content__table {
     padding: 25px 10px 40px 10px;
   }
+
   #customers thead::before {
     display: none;
   }
 }
 
 @media (max-width: 1023px) {
+
   .side {
     width: 200px;
   }
+
   .side__logo-img {
     width: 170px;
   }
+
   .side__user {
     padding-bottom: 30px;
   }
+
   .content {
     width: 100%;
     margin-left: 0;
     padding-top: 80px;
   }
+
   .content__hello {
     margin: 40px 0;
   }
+
   .content__table {
     padding: 25px 10px 40px 10px;
   }
+
   .side {
     margin-top: 80px;
     transform: translateX(-200px);
     transition: all .2s linear;
     z-index: 5;
   }
+
   .side--active{
     transform: translateX(0);
   }
+
   .side__top {
     display: none;
   }
+
   .header-mobile{
     box-sizing: border-box;
     display: flex;
@@ -380,6 +395,7 @@ div.dt-container.dt-empty-footer tbody>tr:last-child>* {
     padding: 20px 20px;
     background-color: #fff;
   }
+
   .burger-wrap {
     display: block;
     height: 30px;
